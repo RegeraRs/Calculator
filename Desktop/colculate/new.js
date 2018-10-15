@@ -9,17 +9,15 @@ function number(x) {
   document.getElementById("numb").value += x;
 };
 function reset(s) {
-  let x = s;
-  let a = x.length;
-  let y = x.substring(0, x.length - 1);
+  let y = s.substring(0, s.length - 1);
   document.getElementById("numb").value = y;
 };
 function result(x) {
-  let resul = x;
-  resul = parseFloat("resul");
-  console.log(resul);
-  return resul;
+  console.log(typeof x);
+  const result = eval(x);
+  document.getElementById("numb").value = result;
+  return result;
 };
-function equally(res) {
-
+function plus(){
+  alert("plus");
 };
