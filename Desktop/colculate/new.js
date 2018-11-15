@@ -1,51 +1,52 @@
-var firNumbers = 0;
-var operators;
-var elementBackColor;
-var x = 0;
+var click = 0;
 
 function disable() {
   document.onkeydown = function(e) {
     return false;
   }
 }
+
 disable();
 
-function operations( firstNumb, operator, element ) {
-  x++;
-  firNumbers = +firstNumb;
+var firstNumbers = 0;
+var operators;
+var elemBackColor;
+
+function operations(firstNumb, operator, element) {
+  click++;
+  firstNumbers = +firstNumb;
   operators = operator;
-  elementBackColor = element;
-  document.getElementById( "numb" ).value = null;
+  elemBackColor = element;
+  document.getElementById('numb').value = null;
   element.style.backgroundColor = "#c6c6c6";
 };
 
 function number( x ) {
-  document.getElementById( "numb" ).value += x;
+  document.getElementById('numb').value += x;
 };
 
 function reset( s ) {
-  let y = s.substring( 0, s.length - 1 );
-  document.getElementById( "numb" ).value = y;
+  const y = s.substring( 0, s.length - 1 );
+  document.getElementById('numb').value = y;
 };
 
 function result( x ) {
   let secNumbers = +x;
-  let resultat;
- switch (operators) {
-   case "+":
-    resultat = firNumbers + secNumbers;
-     break;
+  let finalResult;
+  switch (operators) {
+    case "+":
+      finalResult = firstNumbers + secNumbers;
+      break;
    case "-":
-    resultat = firNumbers - secNumbers;
-     break;
+      finalResult = firstNumbers - secNumbers;
+      break;
    case "*":
-    resultat = firNumbers * secNumbers;
-     break;
+      finalResult = firstNumbers * secNumbers;
+      break;
    case "/":
-    resultat = firNumbers / secNumbers;
+    finalResult = firstNumbers / secNumbers;
      break;
-   default:
  }
-  document.getElementById( "numb" ).value = resultat;
-  elementBackColor.style.backgroundColor = "#f2f2f2";
+  document.getElementById('numb').value = finalResult;
+  elemBackColor.style.backgroundColor = "#f2f2f2";
 };
