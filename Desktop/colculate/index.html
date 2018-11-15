@@ -1,33 +1,33 @@
 <!DOCTYPE <HTML>
 <html>
   <head>
-    <title>Soft</title>
-    <link rel="stylesheet" href="Style.css">
+    <title> Soft </title>
+    <link rel = "stylesheet" href = "Style.css">
   </head>
   <body>
-   <div class="body">
-     <div class="head">
-       <input type="text" id="numb" value="" class="display" placeholder="Your numbers" autofocus>
+   <div class = "body">
+     <div class = "head">
+       <input type = "text" id = "numb" value = "" class = "display" placeholder = "Your numbers" autofocus>
      </div>
      <div class="numbers">
-       <input type="button" class="button" value="0" onclick="number(this.value)">
-       <input type="button" class="button" value="1" onclick="number(this.value)">
-       <input type="button" class="button" value="2" onclick="number(this.value)">
-       <input type="button" class="button" value="-" onclick="number(this.value)">
-       <input type="button" class="button" value="3" onclick="number(this.value)">
-       <input type="button" class="button" value="4" onclick="number(this.value)">
-       <input type="button" class="button" value="5" onclick="number(this.value)">
-       <input type="button" class="button" value="+" onclick="number(this.value), plus()">
-       <input type="button" class="button" value="6" onclick="number(this.value)">
-       <input type="button" class="button" value="7" onclick="number(this.value)">
-       <input type="button" class="button" value="8" onclick="number(this.value)">
-       <input type="button" class="button" value="/" onclick="number(this.value)">
-       <input type="button" class="button" value="9" onclick="number(this.value)">
-       <input type="button" class="button" value="Equ." onclick="result(numb.value)">
-       <input type="button" class="button" value="Res." onclick="reset(numb.value)">
-       <input type="button" class="button" value="*" onclick="number(this)">
+       <input type = "button" class = "button" value = "0" onclick = "number(this.value)" >
+       <input type = "button" class = "button" value = "1" onclick = "number(this.value)" >
+       <input type = "button" class = "button" value = "2" onclick = "number(this.value)" >
+       <input type = "button" class = "button" value = "-" onclick = "operations(numb.value, this.value, this)" >
+       <input type = "button" class = "button" value = "3" onclick = "number(this.value)" >
+       <input type = "button" class = "button" value = "4" onclick = "number(this.value)" >
+       <input type = "button" class = "button" value = "5" onclick = "number(this.value)" >
+       <input type = "button" id = "plus" class = "button" value = "+" onclick = "operations(numb.value, this.value, this)" >
+       <input type = "button" class = "button" value = "6" onclick = "number(this.value)" >
+       <input type = "button" class = "button" value = "7" onclick = "number(this.value)" >
+       <input type = "button" class = "button" value = "8" onclick = "number(this.value)" >
+       <input type = "button" class = "button" value = "/" onclick = "operations(numb.value, this.value, this)" >
+       <input type = "button" class = "button" value = "9" onclick = "number(this.value)" >
+       <input type = "button" class = "button" value = "Res." onclick = "result(numb.value)" >
+       <input type = "button" class = "button" value = "Del." onclick = "reset(numb.value)" >
+       <input type = "button" class = "button" value = "*" onclick = "operations(numb.value, this.value, this)" >
      </div>
    </div>
-   <script src="new.js"></script>
+   <script src = "new.js" ></script>
   </body>
   </html>
