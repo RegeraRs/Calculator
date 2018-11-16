@@ -1,5 +1,3 @@
-var click = 0;
-
 function disable() {
   document.onkeydown = function(e) {
     return false;
@@ -8,17 +6,23 @@ function disable() {
 
 disable();
 
+var click = 0;
 var firstNumbers = 0;
-var operators;
+var mainOperators;
 var elemBackColor;
 
 function operations(firstNumb, operator, element) {
   click++;
-  firstNumbers = +firstNumb;
-  operators = operator;
-  elemBackColor = element;
-  document.getElementById('numb').value = null;
-  element.style.backgroundColor = "#c6c6c6";
+  if (click == 1) {
+    firstNumbers = +firstNumb;
+    mainOperators = operator;
+    elemBackColor = element;
+    document.getElementById('numb').value = null;
+    element.style.backgroundColor = '#c6c6c6';
+  }
+  else {
+    alert("you!");
+  }
 };
 
 function number( x ) {
@@ -33,8 +37,8 @@ function reset( s ) {
 function result( x ) {
   let secNumbers = +x;
   let finalResult;
-  switch (operators) {
-    case "+":
+  switch (mainOperators) {
+   case "+":
       finalResult = firstNumbers + secNumbers;
       break;
    case "-":
@@ -45,8 +49,9 @@ function result( x ) {
       break;
    case "/":
     finalResult = firstNumbers / secNumbers;
-     break;
+      break;
  }
   document.getElementById('numb').value = finalResult;
-  elemBackColor.style.backgroundColor = "#f2f2f2";
+  elemBackColor.style.backgroundColor = '#f2f2f2';
+  click = 0;
 };
