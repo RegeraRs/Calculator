@@ -6,23 +6,28 @@ function disable() {
 
 disable();
 
-var click = 0;
-var firstNumbers = 0;
-var mainOperators;
-var elemBackColor;
+let click = 0;
+let firstNumbers;
+let mainOperators;
+let elemBackColor;
 
 function operations(firstNumb, operator, element) {
-  click++;
-  if (click == 1) {
-    firstNumbers = +firstNumb;
-    mainOperators = operator;
-    elemBackColor = element;
-    document.getElementById('numb').value = null;
-    element.style.backgroundColor = '#c6c6c6';
-  }
-  else {
-    alert("you!");
-  }
+  firstNumbers = +firstNumb;
+  if (firstNumb !== '' && firstNumb !== 0) {
+    click++;
+      if (click == 1) {
+        mainOperators = operator;
+        elemBackColor = element;
+        document.getElementById('numb').value = null;
+        element.style.backgroundColor = '#c6c6c6';
+      }
+      else {
+        alert('You already clicked!');
+      };
+    }
+    else {
+      alert('!');
+    };
 };
 
 function number( x ) {
@@ -48,7 +53,10 @@ function result( x ) {
       finalResult = firstNumbers * secNumbers;
       break;
    case "/":
-    finalResult = firstNumbers / secNumbers;
+      finalResult = firstNumbers / secNumbers;
+      break;
+   case "%":
+      finalResult = firstNumbers % secNumbers;
       break;
  }
   document.getElementById('numb').value = finalResult;

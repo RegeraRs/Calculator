@@ -1,6 +1,6 @@
 .body {
-  width: 500px;
-  height: 445px;
+  width: 626px;
+  height: 641px;
   border: 1px solid black;
   border-radius: 6px;
   margin: 0 auto;
@@ -17,12 +17,12 @@
   font-size: 40px;
 }
 .numbers {
-  width: 500px;
-  height: 404px;
+  width: 625px;
+  height: 600px;
   background-color: green;
 }
 .button {
-  width: 122px;
+  width: 205px;
   height: 100px;
   font-size: 60px;
   padding: 0;
